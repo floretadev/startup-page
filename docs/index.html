@@ -1,0 +1,351 @@
+<html><head>
+    <title>Floreta</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Shop. Shoot. Sell. ">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" href="https://www.launchaco.com/static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.launchaco.com/static/AllTemplates.min.css">
+
+    <style>
+      .launchaco-promo {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        z-index: 999999;
+      }
+
+      .launchaco-promo__active {
+        width: initial;
+        height: initial;
+      }
+
+      .launchaco-promo-speechbubble {
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+        position: absolute;
+        left: 50px;
+        top: -11px;
+        padding: 9px;
+        color: white;
+        border-radius: 3px;
+        background: linear-gradient(#227ef7, #1290fc);
+        font-size: 14px;
+        font-weight: 600;
+        width: 93px;
+        box-sizing: border-box;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .15s ease-in-out;
+      }
+
+      .launchaco-promo__active:hover .launchaco-promo-speechbubble {
+        opacity: 1;
+      }
+
+      .launchaco-promo svg {
+        transition: all .3s ease-in-out;
+        opacity: 0;
+      }
+
+      .launchaco-promo__active svg {
+        opacity: 1;
+      }
+
+      .launchaco-promo-speechbubble:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        left: -4px;
+        bottom: 10px;
+        border-radius: 3px;
+        background: #1290fc;
+        z-index: 2;
+        position: absolute
+      }
+
+      .launchaco-promo__active .launchaco-promo-speechbubble__animate {
+        animation: popinpopup 3s linear forwards 0.1s;
+      }
+
+      @keyframes popinpopup {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 3px, 0)
+        }
+
+        7%,
+        93% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0)
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(0, -4px, 0)
+        }
+      }
+
+      .launchaco-promo-animate:hover {
+        opacity: 1 !important;
+      }
+    </style>
+
+
+    <style>
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 {
+        background-color: #FFFFFF
+      }
+
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 .primary-color {
+        color: #000000
+      }
+
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 .secondary-color {
+        color: #000000
+      }
+
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 .accent-bg {
+        background-color: #297AFB
+      }
+
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 .secondary-bg {
+        background-color: #2898FB
+      }
+
+      .custom-color-16117513-8040-157d-224a-6fa87f815ff7 .svg-fill {
+        fill: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 {
+        background-color: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .primary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .accent-bg {
+        background-color: #297AFB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-bg {
+        background-color: #2898FB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .svg-fill {
+        fill: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 {
+        background-color: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .primary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .accent-bg {
+        background-color: #297AFB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-bg {
+        background-color: #2898FB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .svg-fill {
+        fill: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 {
+        background-color: #FFFFFF
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .primary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-color {
+        color: #000000
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .accent-bg {
+        background-color: #297AFB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .secondary-bg {
+        background-color: #2898FB
+      }
+
+      .custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624 .svg-fill {
+        fill: #FFFFFF
+      }
+    </style>
+  </head>
+
+  <body class="font-friendly">
+    <div class="sunset-black background">
+      <div class="bg">
+        <div class="bg-image" style="background-image: url(&quot;https://images.unsplash.com/photo-1498842812179-c81beecf902c?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNDY1fQ&quot;);"></div> <a href="https://unsplash.com/@sadswim?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from sadswim" class="bg-author" style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;"><span style="display: inline-block; padding: 2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -1px; fill: white;">
+              <title></title>
+              <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+            </svg></span> <span style="display: inline-block; padding: 2px 3px;">ian dooley </span></a>
+      </div>
+      <header class="header">
+        <div class="container-lrg">
+          <div class="flex col-12 spread"><a class="logo launchaco-builder-hoverable logo"><img src="https://cdn.launchaco.com/images/04c3ab31-4552-4eb3-8db2-ffe4c0908d7d.png" alt="FloretaCompany Logo"></a> <a href="mailto:holler@floreta.tv" class="nav-link secondary-color mr0">CONTACT</a></div>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container mb40">
+          <div class="col-12 text-center">
+            <h1 class="heading-lrg primary-color launchaco-builder-hoverable">Shop. Share. Earn.
+            </h1>
+            <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">GET INSPIRED AND MAKE MOST OUT OF YOUR BEAUTY VIDEOS.
+            </h2>
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </section>
+    </div>
+    <section id="feature-1" class="section custom-color-16117513-8040-157d-224a-6fa87f815ff7" sitemeta="[object Object]" activepage="Landing">
+      <div class="container-lrg flex">
+        <div class="flex col-6 flex-column mobile-text-center center-vertical">
+          <!---->
+          <h3 class="bold primary-color launchaco-builder-hoverable"> ALL ABOUT BEAUTY</h3>
+          <p class="paragraph secondary-color launchaco-builder-hoverable">Discover, buy and sell the best in beauty via videos. A mobile platform for everything beauty - Trends, products and more. </p>
+        </div>
+        <div class="col-6 flex center-horizontal center-vertical">
+          <div class="iphone2 launchaco-builder-hoverable">
+            <div class="mask"><img src="https://cdn.launchaco.com/images/cc0f4c0b-855a-4ed8-8e17-065018908abc.png" alt="Screenshot of iPhone App" class="mask-img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="feature-2" class="section custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624" sitemeta="[object Object]" activepage="Landing">
+      <div class="container">
+        <div class="col-12 text-center flex flex-column center-horizontal"><i class="icon secondary-bg mobile-center-icon launchaco-builder-hoverable"><svg class="svg-fill" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5 0h-12A1.5 1.5 0 0 0 10 1.5V3H2.5C1.672 3 1 3.672 1 4.5V17H0v.5A2.503 2.503 0 0 0 2.5 20h17a2.503 2.503 0 0 0 2.5-2.5V17h-1v-6h2.5A1.5 1.5 0 0 0 25 9.5v-8A1.5 1.5 0 0 0 23.5 0zM20 17h-7v1H9v-1H2V4.5a.5.5 0 0 1 .5-.5H10v5.5a1.5 1.5 0 0 0 1.5 1.5H20v6zM16.5 5h2a1.5 1.5 0 0 1 0 3H18v.5a.5.5 0 1 1-1 0V8h-1.5a.5.5 0 1 1 0-1h3a.5.5 0 1 0 0-1h-2a1.5 1.5 0 0 1 0-3h.5v-.5a.5.5 0 1 1 1 0V3h1.5a.5.5 0 1 1 0 1h-3a.5.5 0 1 0 0 1z"></path>
+            </svg></i>
+          <h3 class="heading primary-color launchaco-builder-hoverable">SOCIAL + COMMERCE</h3>
+          <p class="paragraph mt20 secondary-color launchaco-builder-hoverable">Do your friends love your style and recommendations? Share your beauty videos with the Floreta community for fun and commissions. Link products to your videos from our curated list of brands when you post and let these posts do all the selling. </p>
+        </div>
+      </div>
+      <!---->
+    </section>
+    <section id="feature-3" class="section custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624" sitemeta="[object Object]" activepage="Landing">
+      <div class="container-lrg flex">
+        <div class="flex col-6 flex-column mobile-text-center center-vertical">
+          <!---->
+          <h3 class="bold primary-color launchaco-builder-hoverable">TALK ABOUT WHAT YOU LOVE</h3>
+          <p class="paragraph secondary-color launchaco-builder-hoverable">Floreta is a community inspired shopping. Our platform gives a chance for anyone to become an entrepreneur. You promote the brands and products you like and we do the rest. When users in your network buy products from your videos we reward you with commissions.</p>
+        </div>
+        <div class="col-6 flex center-horizontal center-vertical">
+          <div class="launchaco-builder-hoverable">
+            <div class=""><img src="https://cdn.launchaco.com/images/90a25043-b352-4cf2-a78b-c40182a68688.jpg" alt="Screenshot of small App" class="custom-img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="feature-4" class="section custom-color-8bc8237b-4234-1bba-ba8e-5e4a7eb03624" sitemeta="[object Object]" activepage="Landing">
+      <div class="container">
+        <div class="col-12 text-center flex flex-column center-horizontal"><i class="icon secondary-bg mobile-center-icon launchaco-builder-hoverable"><svg class="svg-fill" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 5a5 5 0 1 1 10 0A5 5 0 0 1 3 5zm5 6a8 8 0 0 0-8 8v.5a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V19a8 8 0 0 0-8-8zm9-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-1.522 6H22a4.99 4.99 0 0 0-9.24-2.624A9.06 9.06 0 0 1 15.479 14z"></path>
+            </svg></i>
+          <h3 class="heading primary-color launchaco-builder-hoverable">BUILD YOUR AUDIENCE</h3>
+          <p class="subheading secondary-color mt20 launchaco-builder-hoverable">The faster you build your audience the more sales you make resulting more commissions. Be part of the Floreta community from the beginning.</p>
+        </div>
+      </div>
+      <!---->
+    </section>
+    <section id="cta-5" class="section sunset-black background" sitemeta="[object Object]" activepage="Landing">
+      <div class="bg">
+        <div class="bg-image" style="background-image: url(&quot;https://cdn.launchaco.com/images/29356d06-35cd-4712-8510-4fda1e8baec7.png&quot;);"></div>
+        <!---->
+      </div>
+      <div class="container text-center">
+        <div class="col-12">
+          <h4 class="heading primary-color launchaco-builder-hoverable">BE PART OF THIS COMMUNITY</h4>
+          <p class="paragraph mt20 secondary-color launchaco-builder-hoverable">In closed beta. Want to get early access? Please share your details below.</p>
+          <div class="mt40">
+            <form action="https://floreta.us4.list-manage.com/subscribe/post?u=0c778562822e840bfedca97d5&amp;amp;id=71446ea8cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
+              <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8" tabindex="-1" value=""></div> <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="white-color button no-max-width accent-bg primary-color" value="Get Invite">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer-6" class="section text-center sunset-white" sitemeta="[object Object]" activepage="Landing">
+      <div class="container col-12">
+        <nav class="mb50"><a target="_blank" href="" class="nav-link secondary-color"></a></nav>
+        <div><a href="mailto:holler@floreta.tv" class="socialicons accent-bg email"></a>
+          <!---->
+        </div>
+        <div class="mt50"><span class="span secondary-color">©</span> <span class="span secondary-color">Floreta Inc. 2019</span></div>
+      </div>
+    </footer>
+
+    <a id="visual-dreamer" class="launchaco-promo" target="_blank" href="https://www.launchaco.com/">
+      <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient x1="9.394%" y1="57.704%" x2="105.69%" y2="27.607%" id="a">
+            <stop stop-color="#007FFF" offset="0%"></stop>
+            <stop stop-color="#1290FC" offset="100%"></stop>
+          </linearGradient>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="137.557%" id="b">
+            <stop stop-color="#FF9386" offset="0%"></stop>
+            <stop stop-color="#FF5F86" offset="100%"></stop>
+          </linearGradient>
+          <linearGradient x1="30.817%" y1="-31.6%" x2="63.808%" y2="151.297%" id="c">
+            <stop stop-color="#D7EDFF" offset="0%"></stop>
+            <stop stop-color="#FFF" stop-opacity="0" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <g fill="none">
+          <circle fill="url(#a)" cx="19.832" cy="19.832" r="19.832"></circle>
+          <path d="M26.616.325l4.308 12.587-4.669-.315L26.218.388c0-.105.091-.19.204-.191.088 0 .166.051.194.128z" fill="url(#b)" transform="rotate(45 28.571 6.555)"></path>
+          <path d="M32.031 35.658c-6.164 2.721-12.745-4.33-11.992-10.011 2.617.782 4.626.997 7.904 2.01 2.34.769 4.152.479 5.386-1.13 1.234-1.607 1.316-3.502 0-5.158-4.826-5.49 0 0-10.516-12.264l2.923-2.95C.117 4.123 5.302 32.333 6.903 35.095c4.01 3.54 14.11 8.709 25.128.563z" fill="#FFF"></path>
+          <path d="M9.782 19.176l-.034-.016c0 5.76 4.425 21.794 22.185 16.378-6.148 2.716-12.71-4.29-12.006-9.97a7.394 7.394 0 0 1-2.73.519c-3.922 0-7.135-3.047-7.415-6.911z" fill="url(#c)"></path>
+          <ellipse fill="#354158" cx="22.185" cy="14.958" rx="2.017" ry="1.849"></ellipse>
+          <ellipse fill="#354158" cx="22.185" cy="14.958" rx="2.017" ry="1.849"></ellipse>
+        </g>
+      </svg>
+      <div class="launchaco-promo-speechbubble launchaco-promo-speechbubble__animate">Built With Launchaco</div>
+      <div class="launchaco-promo-speechbubble">Built With Launchaco</div>
+    </a>
+  
+
+  <script>
+    window.onscroll = function()
+    {
+      showAd()
+    }
+
+    function showAd()
+    {
+      var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+
+      // At specifiv position do what you want
+      if (scrollBarPosition > 300)
+      {
+        document.getElementById("visual-dreamer").className = "launchaco-promo launchaco-promo__active";
+        window.onscroll = function() {};
+      }
+    }
+  </script>
+
+</body></html>
